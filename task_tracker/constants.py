@@ -1,0 +1,1 @@
+# např. cesty k souborům, defaultní hodnoty

@@ -1,0 +1,1 @@
+# pomocné funkce (validace, formátování apod.)

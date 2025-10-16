@@ -1,0 +1,1 @@
+# třída Task a případné datové struktury

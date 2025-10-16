@@ -1,0 +1,1 @@
+# čtení/zápis dat (např. JSON soubor)
