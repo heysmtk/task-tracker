@@ -25,7 +25,7 @@ class Task:
         return f"[{self.id}] {self.description} ({self.status})"
 
 
-class TaskManager():
+class TaskManager:
     def __init__(self):
         self.tasks = load_data(DATA)
         self._next_id = max([task.id for task in self.tasks], default=0) + 1
