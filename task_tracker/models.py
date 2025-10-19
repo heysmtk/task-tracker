@@ -1,4 +1,5 @@
 from datetime import datetime
+from storage import DATA, save_data, load_data
 
 class Task:
     def __init__(self, id, description, status="todo"):
@@ -26,19 +27,21 @@ class Task:
 
 class TaskManager():
     def __init__(self):
-        self.tasks = []
-        self._next_id = 1
+        self.tasks = load_data(DATA)
+        self._next_id = max([task.id for task in self.tasks], default=0) + 1
         
     def add_task(self, description):
         task = Task(self._next_id, description, status="todo")
         self.tasks.append(task)
         self._next_id += 1
+        save_data(DATA, self.tasks)
         return task
         
     def update_task(self, id, new_description):
         for task in self.tasks:
             if task.id == id:
                 task.update_description(new_description)
+                save_data(DATA, self.tasks)
                 return task
         
         raise ValueError(f"Task with id {id} not found")
@@ -47,6 +50,7 @@ class TaskManager():
         for task in self.tasks:
             if task.id == id:
                 self.tasks.remove(task)
+                save_data(DATA, self.tasks)
                 return task
             
         raise ValueError(f"Task with id {id} not found")
@@ -55,6 +59,7 @@ class TaskManager():
         for task in self.tasks:
             if task.id == id:
                 task.mark_as_done()
+                save_data(DATA, self.tasks)
                 return task
             
         raise ValueError(f"Task with id {id} not found")
@@ -63,6 +68,7 @@ class TaskManager():
         for task in self.tasks:
             if task.id == id:
                 task.mark_as_in_progress()
+                save_data(DATA, self.tasks)
                 return task
             
         raise ValueError(f"Task with id {id} not found")
@@ -75,5 +81,3 @@ class TaskManager():
         for task in self.tasks:
             if task.status == "done":
                 print(task)
-        
-        
