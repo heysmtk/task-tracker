@@ -1,10 +1,7 @@
 import json
 import datetime
-from pathlib import Path
 from models import Task
 
-
-DATA = Path("data") / "tasks.json"
 
 def save_data(path, tasks):
     """Saving tasks to JSON file."""
