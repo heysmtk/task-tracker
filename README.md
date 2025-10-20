@@ -3,6 +3,8 @@
 Jednoduchá **CLI aplikace v Pythonu** pro správu úkolů přímo z příkazové řádky.  
 Projekt jsem vytvořil jako trénink objektově orientovaného programování a práce se soubory (JSON).
 
+Based on - https://roadmap.sh/projects/task-tracker
+
 ### Funkce
 
 - Přidávání, mazání a úprava úkolů  
