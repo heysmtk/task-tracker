@@ -79,8 +79,10 @@ class TaskManager:
             print(task)
         
     def list_done_tasks(self):
-        for task in self.tasks:
-            if task.status == "done":
+        done_tasks = [task for task in self.tasks if task.status == "done"]
+        
+        if not done_tasks:
+            print("List of done tasks is empty")
+        else:
+            for task in done_tasks:
                 print(task)
-            else:
-                print("List of done tasks is empty")
