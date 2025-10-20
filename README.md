@@ -1,11 +1,9 @@
-# 🧭 Task Tracker CLI
+## Task Tracker CLI
 
 Jednoduchá **CLI aplikace v Pythonu** pro správu úkolů přímo z příkazové řádky.  
 Projekt jsem vytvořil jako trénink objektově orientovaného programování a práce se soubory (JSON).
 
----
-
-## 🚀 Funkce
+### Funkce
 
 - Přidávání, mazání a úprava úkolů  
 - Označení úkolu jako **done** nebo **in progress**  
@@ -13,9 +11,7 @@ Projekt jsem vytvořil jako trénink objektově orientovaného programování a 
 - Data se ukládají do souboru `data/tasks.json`  
 - Při dalším spuštění se úkoly znovu načtou  
 
----
-
-## 💻 Ukázka použití
+### Ukázka použití
 
 ```bash
 # Přidání nového úkolu
@@ -36,9 +32,7 @@ python3 main.py list-all
 # Výpis hotových úkolů
 python3 main.py list-done
 ```
----
-
-## Struktura projektu
+### Struktura projektu
 ```bash
 task-tracker/
 │
@@ -56,9 +50,7 @@ task-tracker/
 ├── .gitignore
 └── requirements.txt
 ```
----
-
-## Instalace a spuštění
+### Instalace a spuštění
 1. Naklonuj repozitář
 ```bash
 git clone https://github.com/heysmtk/task-tracker.git
@@ -68,9 +60,8 @@ cd task-tracker-cli/task_tracker
 ```bash
 python3 main.py add "Koupit kafe"
 ```
----
 
-## License
+### License
 MIT License
 
 Copyright (c) 2025 Tomáš Smutek
