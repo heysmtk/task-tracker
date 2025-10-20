@@ -1,5 +1,5 @@
 import json
-import datetime
+from datetime import datetime
 
 
 def save_data(path, tasks):
