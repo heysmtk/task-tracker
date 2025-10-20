@@ -6,9 +6,9 @@ def save_data(path, tasks):
     """Saving tasks to JSON file."""
     
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         data = [task.__dict__ for task in tasks]
-        json.dump(data, f, default=str, indent=4)
+        json.dump(data, f,ensure_ascii=False, default=str, indent=4)
         
         
 def load_data(path):
