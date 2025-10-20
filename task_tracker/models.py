@@ -15,7 +15,7 @@ class Task:
         self.updated_at = datetime.now()
     
     def mark_as_in_progress(self):
-        self.status = "in_progress"
+        self.status = "in progress"
         self.updated_at = datetime.now()
         
     def update_description(self, new_description):
@@ -82,3 +82,5 @@ class TaskManager:
         for task in self.tasks:
             if task.status == "done":
                 print(task)
+            else:
+                print("List of done tasks is empty")
