@@ -1,3 +1,3 @@
 from pathlib import Path
 
-DATA = Path("data") / "tasks.json"
+DATA = Path(__file__).resolve().parent.parent / "data" / "tasks.json"
