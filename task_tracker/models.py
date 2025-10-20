@@ -1,5 +1,6 @@
 from datetime import datetime
-from storage import DATA, save_data, load_data
+from constants import DATA
+from storage import save_data, load_data
 
 class Task:
     def __init__(self, id, description, status="todo"):
