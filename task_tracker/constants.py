@@ -1,1 +1,3 @@
-# např. cesty k souborům, defaultní hodnoty
+from pathlib import Path
+
+DATA = Path("data") / "tasks.json"
